@@ -18,7 +18,7 @@ import com.sitexa.gankot.utils.toast
 import kotlinx.android.synthetic.main.fragment_base.*
 
 /**
- * Created by caik on 2017/5/31.
+ * xnpeng (xnpeng@hotmail.com)
  */
 class WelfareFragment : BaseFragment() {
 

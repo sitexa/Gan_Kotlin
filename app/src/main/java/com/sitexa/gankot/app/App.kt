@@ -3,7 +3,7 @@ package com.sitexa.gankot.app
 import android.app.Application
 
 /**
- * Created by caik on 2017/5/31.
+ * xnpeng (xnpeng@hotmail.com)
  */
 class App : Application() {
 

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter
 import java.util.*
 
 /**
- * Created by caik on 2017/5/31.
+ * xnpeng (xnpeng@hotmail.com)
  */
 class MainAdapter(var data:List<Fragment> = ArrayList(), var titles :Array<String>,fm:FragmentManager) : FragmentStatePagerAdapter(fm) {
 

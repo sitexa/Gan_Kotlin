@@ -12,7 +12,7 @@ import com.sitexa.gankot.utils.toast
 import kotlinx.android.synthetic.main.fragment_article_list.*
 
 /**
- * Created by caik on 2017/5/31.
+ * xnpeng (xnpeng@hotmail.com)
  */
 open abstract class ArticleFragment : BaseFragment() {
 

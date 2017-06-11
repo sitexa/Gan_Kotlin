@@ -3,7 +3,7 @@ package com.sitexa.gankot.ui.fragment
 import com.sitexa.gankot.common.Type
 
 /**
- * Created by caik on 2017/5/31.
+ * xnpeng (xnpeng@hotmail.com)
  */
 class WebFragment : ArticleFragment(){
 
