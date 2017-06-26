@@ -15,5 +15,3 @@ Android App build with Kotlin, base on Gan_Kotlin project.
 [PhotoView](https://github.com/chrisbanes/PhotoView)
 
 [jsoup](https://jsoup.org)
-
-
