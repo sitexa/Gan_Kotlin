@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.common_toolbar.*
 /**
  * Created by caik on 2017/6/5.
  */
-class PhotoActivity :AppCompatActivity(){
+class PhotoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +26,7 @@ class PhotoActivity :AppCompatActivity(){
             return
         }
 
-        Glide
-                .with(this)
+        Glide.with(this)
                 .load(url)
                 .into(photoView)
     }

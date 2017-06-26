@@ -7,8 +7,11 @@
     <item android:id="@+id/action_girl"
           android:title="@string/girl"
           android:icon="@drawable/girl" />
-    <item android:id="@+id/action_history"
+   <item android:id="@+id/action_history"
           android:title="@string/history"
           android:icon="@drawable/history" />
+    <item android:id="@+id/action_sweet"
+        android:title="@string/sweet"
+        android:icon="@drawable/sweet" />
 
 </menu>

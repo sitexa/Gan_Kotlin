@@ -1,5 +1,6 @@
 package com.sitexa.gankot.net
 
+import com.sitexa.gankot.app.gankApiBaseUrl
 import com.sitexa.gankot.repository.PublishedDate
 import com.sitexa.gankot.repository.Result
 import io.reactivex.Observable
@@ -11,8 +12,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-
-
 
 /**
  * xnpeng (xnpeng@hotmail.com)
@@ -52,7 +51,7 @@ interface Api {
                     .client(client)
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl("http://gank.io/")
+                    .baseUrl(gankApiBaseUrl)
                     .build()
 
             return retrofit.create(Api::class.java)

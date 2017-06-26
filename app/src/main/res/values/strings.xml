@@ -5,8 +5,18 @@
     <string name="history">往期</string>
     <string name="girl">妹子</string>
     <string name="video">视频</string>
-
     <string name="girl_title">妹纸福利</string>
     <string name="history_title">往期推荐</string>
     <string name="video_title">休息视频</string>
+    <string name="header_icon">头像</string>
+    <string name="load_fail">下载失败</string>
+    <string name="no_more_data">没有更多数据</string>
+
+    <string name="sweet">糖果</string>
+    <string name="sweet_title">糖果系列</string>
+    <string name="author_image">头像</string>
+    <string name="author_name">Stark Green</string>
+    <string name="content">乳燕飞华屋。悄无人、桐阴转午，晚凉新浴。手弄生绡白团扇，扇手一时似玉。渐困倚、孤眠清熟。帘外谁来推绣户，枉教人、梦断瑶台曲。又却是，风敲竹。
+    </string>
+    <string name="comment">SwipeRefresh RecyclerView onRefresh and onLoadMore</string>
 </resources>

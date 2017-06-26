@@ -37,7 +37,7 @@ class WelfareFragment : BaseFragment() {
 
     override fun initRecyclerView() {
         recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        var simpleAnimator: SimpleItemAnimator = recyclerView.itemAnimator as SimpleItemAnimator
+        val simpleAnimator: SimpleItemAnimator = recyclerView.itemAnimator as SimpleItemAnimator
         simpleAnimator.supportsChangeAnimations = false
 
         adapter = GirlAdapter(activity!!.applicationContext, R.layout.item_girl)

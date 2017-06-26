@@ -7,15 +7,17 @@ import com.sitexa.gankot.R
 import com.sitexa.gankot.ui.fragment.ArticleContainerFragment
 import com.sitexa.gankot.ui.fragment.HistoryFragment
 import com.sitexa.gankot.ui.fragment.WelfareFragment
+import com.sitexa.gankot.ui.fragment2.SweetFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     var lastIndex = -1
-    var lastFragment:Fragment? = null
-    var articleContainerFragment:ArticleContainerFragment? = null
-    var historyFragment:HistoryFragment? = null
-    var girlFragment:WelfareFragment? = null
+    var lastFragment: Fragment? = null
+    var articleContainerFragment: ArticleContainerFragment? = null
+    var historyFragment: HistoryFragment? = null
+    var girlFragment: WelfareFragment? = null
+    var sweetFragment: SweetFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +34,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_history -> {
                     changeTab(2)
                 }
+                R.id.action_sweet -> {
+                    changeTab(3)
+                }
             }
-
             true
         }
 
@@ -44,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     fun changeTab(position: Int) {
 
-        if (lastIndex == position ) {
+        if (lastIndex == position) {
             return
         }
 
@@ -59,13 +63,12 @@ class MainActivity : AppCompatActivity() {
 
         when (position) {
             0 -> {
-
                 articleContainerFragment = fragmentManager.findFragmentByTag(ArticleContainerFragment::class.java.simpleName) as ArticleContainerFragment?
 
                 if (articleContainerFragment == null) {
                     articleContainerFragment = ArticleContainerFragment.newInstance()
-                    fragmentTransaction.add(R.id.container,articleContainerFragment,ArticleContainerFragment::class.java.simpleName)
-                }else{
+                    fragmentTransaction.add(R.id.container, articleContainerFragment, ArticleContainerFragment::class.java.simpleName)
+                } else {
                     fragmentTransaction.show(articleContainerFragment)
                 }
 
@@ -76,26 +79,36 @@ class MainActivity : AppCompatActivity() {
 
                 if (girlFragment == null) {
                     girlFragment = WelfareFragment.newInstance()
-                    fragmentTransaction.add(R.id.container,girlFragment,WelfareFragment::class.java.simpleName)
-                }else{
+                    fragmentTransaction.add(R.id.container, girlFragment, WelfareFragment::class.java.simpleName)
+                } else {
                     fragmentTransaction.show(girlFragment)
                 }
 
                 lastFragment = girlFragment
             }
             2 -> {
-
                 historyFragment = fragmentManager.findFragmentByTag(HistoryFragment::class.java.simpleName) as HistoryFragment?
 
                 if (historyFragment == null) {
                     historyFragment = HistoryFragment.newInstance()
-                    fragmentTransaction.add(R.id.container,historyFragment,HistoryFragment::class.java.simpleName)
-                }else{
+                    fragmentTransaction.add(R.id.container, historyFragment, HistoryFragment::class.java.simpleName)
+                } else {
                     fragmentTransaction.show(historyFragment)
                 }
 
                 lastFragment = historyFragment
+            }
+            3 -> {
+                sweetFragment = fragmentManager.findFragmentByTag(SweetFragment::class.java.simpleName) as SweetFragment?
 
+                if (sweetFragment == null) {
+                    sweetFragment = SweetFragment.newInstance()
+                    fragmentTransaction.add(R.id.container, sweetFragment, SweetFragment::class.java.simpleName)
+                } else {
+                    fragmentTransaction.show(sweetFragment)
+                }
+
+                lastFragment = sweetFragment
             }
         }
 

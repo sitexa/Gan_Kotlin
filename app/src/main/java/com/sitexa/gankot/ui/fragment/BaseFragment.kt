@@ -26,8 +26,8 @@ abstract class BaseFragment : Fragment() {
     var pageNumber = 1
     var isRefresh = false
 
-    var activity:Activity? = null
-    var rootView:View? = null
+    var activity: Activity? = null
+    var rootView: View? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (rootView == null) {
@@ -44,12 +44,10 @@ abstract class BaseFragment : Fragment() {
         swipeLayout.setOnRefreshListener({
             pageNumber = 1
             isRefresh = true
-            loadData(pageSize,pageNumber)
+            loadData(pageSize, pageNumber)
         })
 
-
-        loadData(pageSize,pageNumber)
-
+        loadData(pageSize, pageNumber)
     }
 
     protected fun loadData(pageSize: Int, pageNumber: Int) {
@@ -62,8 +60,8 @@ abstract class BaseFragment : Fragment() {
                     parseResult(result)
                 }, {
                     _ ->
-                        loadError()
-                        loadFinish()
+                    loadError()
+                    loadFinish()
                 })
     }
 
@@ -72,11 +70,10 @@ abstract class BaseFragment : Fragment() {
 
         if (result.error) {
             loadError()
-        }else{
+        } else {
             loadSuccess(result.results)
         }
         loadFinish()
-
     }
 
     override fun onAttach(activity: Activity?) {

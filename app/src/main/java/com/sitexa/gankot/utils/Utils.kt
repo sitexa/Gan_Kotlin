@@ -2,6 +2,7 @@ package com.sitexa.gankot.utils
 
 import android.app.Activity
 import android.support.v7.app.AppCompatActivity
+import android.util.DisplayMetrics
 import android.widget.Toast
 import com.sitexa.gankot.ui.fragment.ProgressFragment
 
@@ -26,6 +27,22 @@ fun AppCompatActivity.showProgress() {
 fun AppCompatActivity.dismissProgress() {
     (supportFragmentManager.findFragmentByTag(ProgressFragment::class.java.simpleName) as ProgressFragment?)?.dismiss()
 
+}
+
+fun AppCompatActivity.testDimen(): Pair<Int, Int> {
+    val dm = DisplayMetrics()
+    windowManager.defaultDisplay.getMetrics(dm)
+    val width = dm.widthPixels
+    val height = dm.heightPixels
+    val density = dm.density
+    val dpi = dm.densityDpi
+    println("testDimen:$width * $height : $density : $dpi")
+
+    val width_dip = (width / density + 0.5f).toInt()
+    val height_dip = (height / density + 0.5f).toInt()
+    println("testDimen: ${width_dip}dp * ${height_dip}dp")
+
+    return Pair(width, height)
 }
 
 /** Activity 拓展 end */
