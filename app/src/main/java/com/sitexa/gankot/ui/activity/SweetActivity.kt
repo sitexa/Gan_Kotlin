@@ -90,7 +90,7 @@ class SweetActivity : AppCompatActivity() {
         supportActionBar!!.title = title
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        sweetRecyclerView.itemAnimator = DefaultItemAnimator()
+        //sweetRecyclerView.itemAnimator = DefaultItemAnimator()
 
         val mLayoutManager = LinearLayoutManager(this)
         sweetRecyclerView.layoutManager = mLayoutManager
